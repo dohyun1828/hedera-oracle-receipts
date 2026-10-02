@@ -1,5 +1,5 @@
 const nextConfig = {
-  serverExternalPackages: ['@sh/oracle-core', 'ethers'],
-  poweredByHeader: false
+  serverExternalPackages: ["@sh/oracle-core", "ethers"],
+  poweredByHeader: false,
 };
 export default nextConfig;
