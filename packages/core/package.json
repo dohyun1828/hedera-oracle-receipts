@@ -1,0 +1,5 @@
+{
+  "name": "@sh/oracle-core", "version": "1.0.0", "private": true, "type": "module",
+  "exports": { ".": "./receipt.mjs", "./network": "./network.mjs" },
+  "dependencies": { "ethers": "6.17.0", "@hashgraph/sdk": "2.81.0" }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "oracle-receipts",
+  "description": "Capture a pinned Chainlink round and verify its receipt against Hedera testnet HCS.",
+  "version": "1.0.0",
+  "create-scaffold-hbar": {
+    "requirements": { "node": ">=22.14.0" },
+    "capabilities": { "frontend": ["nextjs-app"], "solidityFramework": ["hardhat"], "packageManager": ["npm"] },
+    "defaults": { "frontend": "nextjs-app", "solidityFramework": "hardhat", "packageManager": "npm" },
+    "outro": { "sections": [{ "title": "Oracle Receipt Lab", "steps": [
+      { "label": "Run the validation suite", "command": "{run:test}" },
+      { "label": "Start the read-only dashboard", "command": "{run:dev}" },
+      { "text": "See README.md for testnet anchoring and independent receipt verification." }
+    ] }] }
+  }
+}

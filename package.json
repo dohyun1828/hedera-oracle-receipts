@@ -1,0 +1,29 @@
+{
+  "name": "hedera-oracle-receipts",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "workspaces": [
+    "packages/core",
+    "packages/nextjs",
+    "packages/hardhat"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @sh/nextjs",
+    "start": "npm run start -w @sh/nextjs",
+    "build": "npm run compile -w @sh/hardhat && npm run build -w @sh/nextjs",
+    "lint": "eslint . && npm run typecheck -w @sh/nextjs",
+    "test": "node --test packages/core/test/*.test.mjs && npm run test -w @sh/hardhat",
+    "capture": "node scripts/capture.mjs",
+    "anchor": "node --env-file=.env scripts/anchor.mjs",
+    "verify": "node scripts/verify.mjs",
+    "next:dev": "npm run dev -w @sh/nextjs"
+  },
+  "devDependencies": {
+    "eslint": "9.39.1",
+    "eslint-config-next": "16.3.8"
+  }
+}
