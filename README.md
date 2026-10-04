@@ -77,6 +77,14 @@ On 2026-10-02 the 26 core/network tests and 8 local Solidity tests passed. Lint,
 
 Live HCS anchoring and mirror readback are still pending testnet faucet verification. There is no completed competition submission or prize claim represented by this repository. Do not treat the mocked mirror tests as a real transaction.
 
+## Release kit
+
+- `USER-GUIDE.md`: operator-focused setup, capture, anchoring and verification instructions.
+- `DEPLOYMENT.md`: production deployment checklist and operating boundaries.
+- `VALIDATION.md`: dated validation evidence for this release candidate.
+- `RELEASE-NOTES.md`: packaged release contents, known limitations and acceptance criteria.
+- `SUBMISSION-CHECKLIST.md`: completed bounty fields, remaining evidence, and actions that still require user approval.
+
 ## Sources and attribution
 
 - [Scaffold-HBAR competition brief](https://hedera.com/blog/scaffold-hbar-template-bounty/)

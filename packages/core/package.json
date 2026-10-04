@@ -8,7 +8,6 @@
     "./network": "./network.mjs"
   },
   "dependencies": {
-    "ethers": "6.17.0",
-    "@hashgraph/sdk": "2.81.0"
+    "ethers": "6.17.0"
   }
 }

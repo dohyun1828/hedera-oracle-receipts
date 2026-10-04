@@ -23,9 +23,15 @@
     "next:dev": "npm run dev -w @sh/nextjs",
     "format": "prettier --write ."
   },
+  "overrides": {
+    "@grpc/grpc-js": "1.14.5",
+    "protobufjs": "8.8.0"
+  },
   "devDependencies": {
+    "@hashgraph/sdk": "2.81.0",
     "eslint": "9.39.1",
     "eslint-config-next": "16.3.8",
-    "prettier": "3.9.9"
+    "prettier": "3.9.9",
+    "typescript": "5.9.3"
   }
 }
