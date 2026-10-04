@@ -1,6 +1,6 @@
 # Release validation
 
-Validation date: 2026-10-03 (UTC)
+Validation date: 2026-10-03; published-template recheck: 2026-10-04 (UTC)
 
 Validated source: release candidate based on public commit `1c34da2`, with the dependency and documentation changes described below.
 
@@ -26,11 +26,11 @@ The release-directory checks above are not the official external-template gate. 
 - Lint from the unmodified scaffold: FAIL, because root ESLint could not resolve `typescript` when npm kept it under the Next.js workspace.
 - Local fix: add `typescript: 5.9.3` to the root devDependencies. After installation, lint, TypeScript and production build pass.
 
-This release candidate contains that dependency fix. A fresh scaffold from the published commit is still required before the official remote gate can be claimed as passing.
+Published commit `83220e1` was then scaffolded again from the public GitHub repository on 2026-10-04. Fresh dependency installation, all 34 tests, lint, TypeScript, production build, local app boot, the home route and a live read-only `/api/observe` request all passed. The observation returned `oracle-receipt/1` on chain 295 with a 64-character digest.
 
 The first production-build attempt in the isolated release workspace failed because its temporary `node_modules` junction pointed outside Turbopack's filesystem root. The same source then built successfully against the original real dependency tree. This was an environment packaging issue, not an application-code failure.
 
-The full development-tool audit still reports 35 transitive findings (24 high, 1 moderate, 10 low), primarily in Hardhat and the Hedera SDK's unused React Native toolchain. No critical finding remains. These tools are not installed by a production-only web deployment, but they remain a maintenance item for local HCS/contract development.
+The full development-tool audit still reports 35 transitive findings (23 high, 1 moderate, 11 low), primarily in Hardhat and the Hedera SDK's unused React Native toolchain. No critical finding remains. These tools are not installed by a production-only web deployment, but they remain a maintenance item for local HCS/contract development.
 
 ## Claims boundary
 
