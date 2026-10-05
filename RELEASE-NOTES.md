@@ -11,7 +11,7 @@
 
 ## Known limitations
 
-- A live HCS submit and Mirror Node readback remain unverified because testnet faucet verification was not completed.
+- One live testnet HCS submit and exact Mirror Node readback are documented in `TESTNET-EVIDENCE.md`.
 - Public Hashio and Mirror Node endpoints have no bundled availability guarantee.
 - Only the fixed HBAR/USD feed and `oracle-receipt/1` schema are supported.
 - The release is public MIT-licensed source. Commercial value should be offered as implementation, customization, deployment and support rather than exclusive source access.

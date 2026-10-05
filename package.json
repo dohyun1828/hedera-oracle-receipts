@@ -18,7 +18,7 @@
     "lint": "eslint . && npm run typecheck -w @sh/nextjs",
     "test": "node --test packages/core/test/*.test.mjs && npm run test -w @sh/hardhat",
     "capture": "node scripts/capture.mjs",
-    "anchor": "node --env-file=.env scripts/anchor.mjs",
+    "anchor": "node --env-file=.env scripts/anchor.mjs --testnet",
     "verify": "node scripts/verify.mjs",
     "next:dev": "npm run dev -w @sh/nextjs",
     "format": "prettier --write ."

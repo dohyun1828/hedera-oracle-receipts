@@ -15,7 +15,7 @@ Validated source: release candidate based on public commit `1c34da2`, with the d
 | Production dependency audit | PASS | `npm audit --omit=dev` reported 0 vulnerabilities after separating the local HCS SDK from the web runtime and overriding vulnerable protobuf/grpc releases |
 | Local home page | PASS | `GET http://127.0.0.1:3178/` returned HTTP 200 and contained `Oracle Receipt Lab` |
 | Live mainnet observation | PASS | `GET /api/observe` returned HTTP 200 with `schema=oracle-receipt/1`, `chainId=295`, an eligible round and a SHA-256 digest |
-| Live HCS anchor/readback | PENDING | No real testnet transaction or Mirror Node evidence was produced in this validation |
+| Live HCS anchor/readback | PASS | Topic `0.0.10865105`, sequence `1`, payer `0.0.10865085`; exact receipt bytes and digest matched the public Mirror Node |
 
 ## Official scaffold gate (separate result)
 

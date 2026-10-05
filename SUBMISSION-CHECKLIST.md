@@ -13,6 +13,7 @@ This file is a draft only. Nothing has been submitted.
 - AI disclosure: developed with Codex assistance; scope and validation are documented in `AGENTS.md` and `VALIDATION.md`
 - Local source validation: 26 core/network tests and 8 Solidity tests pass; lint, TypeScript and production build pass
 - Official external-template retest: public commit `1c34da2` exposed a root TypeScript resolution failure. Published fix commit `83220e1` was scaffolded again from GitHub on 2026-10-04; clean installation, all 34 tests, lint, TypeScript, production build, app boot and core read-only routes passed.
+- Live testnet evidence: topic `0.0.10865105`, sequence `1`, payer `0.0.10865085`, transaction `0.0.10865085@1791164496.187795078`; exact receipt bytes and SHA-256 matched the public Mirror Node.
 
 ## Draft description
 
@@ -20,21 +21,14 @@ Oracle Receipt Lab is a reusable Next.js and Hardhat template for retaining the 
 
 ## Still required before eligibility
 
-1. Prepare a funded ECDSA testnet account through one user-controlled official path:
-   - Hedera Portal faucet: the current anonymous official page displays a limit of 10 test HBAR per day. Determine at action time whether it requires CAPTCHA or another interactive verification. A 2026-10-02 screenshot records a CAPTCHA; no funding request was attempted in this validation.
-   - HashPack alternative: Hedera's official account-creation guide documents creating an ECDSA Testnet account in HashPack with an initial 100 testHBAR. This is a documented alternative, not a flow tested in this project. The user must create and secure the wallet personally and must never share a password, recovery phrase, or private key.
-2. Resolve the chosen funded account to its numeric testnet account ID and set only `HEDERA_ACCOUNT_ID` in the ignored `.env`. Do not disclose or replace a private key unless the account/key pairing has been deliberately reviewed by the user.
-3. Run `npm run capture`, then `npm run anchor -- --testnet`, then `npm run verify`.
-4. Confirm that `runtime/evidence.json` exists and that its HashScan/Mirror link points to the same topic, sequence and payer.
-5. Inspect the actual Google submission form and confirm every required field, including whether it requests a mainnet account. Its current fields were not directly inspected in this run.
-6. Review the separate Hedera registration page's mandatory information/marketing consent before accepting it. The public registration page currently displays that consent, but it should not be assumed to be a field in the Google submission form.
-7. Submit the form with the repository and public transaction evidence before the deadline.
+1. Inspect the actual Google submission form and confirm every required field, including whether it requests a mainnet account. Its later-page fields were not directly inspected in this run.
+2. Review the separate Hedera registration page's mandatory information/marketing consent before accepting it. The public registration page currently displays that consent, but it should not be assumed to be a field in the Google submission form.
+3. Submit the form with the repository and the verified public Mirror Node message link before the deadline.
 
-The current local state has a test-only private key, no numeric account ID, no topic/evidence file, and no submitted registration or competition entry. A read-only request to the testnet Mirror Node account endpoint for the recorded EVM address returned HTTP 404. This means that endpoint did not resolve an account record for that identifier at query time; it does not by itself prove why the account is absent, whether faucet CAPTCHA is currently shown, or whether another account-creation route would work. The HashPack path is documented at `https://docs.hedera.com/native/tutorials/getting-started/create-fund-account#option-3-hashpack-wallet`; no wallet creation, funding request, or transaction was attempted here.
+The existing dedicated ECDSA testnet key was reused on 2026-10-05; no new key was generated in that run. The key remains only in the ignored local `.env` and is not included in evidence or source control. The faucet funded its public EVM address with 10 test HBAR, the Mirror Node resolved account `0.0.10865085`, and `TESTNET-EVIDENCE.md` records the successful HCS transaction and readback. No final registration or competition submission has been sent.
 
 ## Do not claim yet
 
-- successful live HCS anchoring or Mirror Node readback
 - completed registration or submission
 - eligibility, judging acceptance, award, revenue or deposit
 - production RPC availability or an SLA

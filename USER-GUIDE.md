@@ -55,7 +55,7 @@ The command writes `runtime/receipt.json` and prints its digest and assessment. 
 
 ```text
 npm run capture
-npm run anchor -- --testnet
+npm run anchor
 npm run verify
 ```
 
